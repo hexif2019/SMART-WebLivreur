@@ -1,0 +1,16 @@
+{
+  "id": "10001",
+  "token": "TOKEN123456789",
+  "user": {
+    "id": "10001",
+    "nom": "vogel",
+    "prenom": "hugues",
+    "email": "hugues.vogel@boitemail.com",
+    "residence": {
+      "id": "50002",
+      "adresse": "20 avenue Ablert Einstein Bat.B",
+      "codePostal": 69100,
+      "ville": "Villeurbanne"
+    }
+  }
+}

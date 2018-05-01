@@ -1,15 +1,16 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "smart-web-livreur"
+    "name": "smart-web-client"
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        { "glob": "**/*", "input": "./assets/fakeapi/", "output": "./api/" },
+        { "glob": "**/*", "input": "./assets/fakeimg/", "output": "./img/" },
+        { "glob": "favicon.ico", "input": "./", "output": "./" }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,13 +20,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "prod": "environments/environment.prod.ts",
+        "devfakeapi": "environments/environment.fakeapi.ts"
       }
     }
   ],
@@ -54,7 +57,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

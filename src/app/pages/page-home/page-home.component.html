@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" [ngClass]="{'col-md-7': currentCommandes && currentCommandes.length && oldCommandes && oldCommandes.length}">
+      <div *ngIf="currentCommandes && currentCommandes.length" class="commandes-en-cour">
+        <h2>Vos commandes</h2>
+        <div *ngFor="let commande of oldCommandes" class="card border-{{ commande.display.status.etat }} mb-4">
+          <div class="card-body">
+            <div class="clearfix">
+              <h5 class="card-title float-left text-{{ commande.display.status.etat }}">{{ (commande.magasins.length === 1 && commande.display.status.titleOne) || commande.display.status.title }}</h5>
+              <span class="commande-date float-right ">{{ commande.display.date || '00/00/2017' }}</span>
+            </div>
+
+            <p class="card-text">Info Commande</p>
+            <div *ngFor="let magasin of commande.magasins" class="mb-2">
+              <h6 class="card-subtitle mb-2 text-muted"> {{ magasin.denomination }}<span class="magasin-status float-right badge badge-{{ magasin.display.status.etat }}"> {{ magasin.display.status.title }} </span> </h6>
+
+              <div class="articles">
+                <div *ngFor="let article of magasin.produits" class="article">
+                  <img src="{{article.img}}" alt="{{ article.denomination }}">
+                  <span *ngIf="article.nb > 1" class="article-nb">{{ article.nb }}</span>
+                  <div class="article-detail">
+                    <div class="clearfix">
+                      <h6>{{ article.denomination }} <span class="article-prix"> {{ article.prix | prix }}€</span></h6>
+                      <span class="article-qte">qte: <span>{{ article.nb }}</span></span>
+                    </div>
+                    <p>{{ article.description }}</p>
+                    <div *ngIf="article.nb > 1">
+                      total: {{(article.prix*article.nb) | prix }}€
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12" [ngClass]="{'col-md-5': currentCommandes && currentCommandes.length && oldCommandes && oldCommandes.length}">
+      <div *ngIf="oldCommandes && oldCommandes.length"  class="commandes-passer">
+        <h2>Ancienne commande</h2>
+        <div *ngFor="let commande of oldCommandes" class="card border-{{ commande.display.status.etat }} mb-4">
+          <div class="card-body">
+            <div class="clearfix">
+              <h5 class="card-title float-left text-{{ commande.display.status.etat }}">{{ (commande.magasins.length === 1 && commande.display.status.titleOne) || commande.display.status.title }}</h5>
+              <span class="commande-date float-right ">{{ commande.display.date || '00/00/2017' }}</span>
+            </div>
+
+            <p class="card-text">Info Commande</p>
+            <div *ngFor="let magasin of commande.magasins" class="mb-2">
+              <h6 class="card-subtitle mb-2 text-muted"> {{ magasin.denomination }}<span class="magasin-status float-right badge badge-{{ magasin.display.status.etat }}"> {{ magasin.display.status.title }} </span> </h6>
+
+              <div class="articles">
+                <div *ngFor="let article of magasin.produits" class="article">
+                  <img src="{{article.img}}" alt="{{ article.denomination }}">
+                  <span *ngIf="article.nb > 1" class="article-nb">{{ article.nb }}</span>
+                  <div class="article-detail">
+                    <div class="clearfix">
+                      <h6>{{ article.denomination }} <span class="article-prix"> {{ article.prix | prix }}€</span></h6>
+                      <span class="article-qte">qte: <span>{{ article.nb }}</span></span>
+                    </div>
+                    <p>{{ article.description }}</p>
+                    <div *ngIf="article.nb > 1">
+                      total: {{(article.prix*article.nb) | prix }}€
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!viewAllOldCommande" class="btn" (click)="loadMorCommandes()"></div>
+      </div>
+    </div>
+  </div>
+</div>

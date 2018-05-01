@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" routerLink="/">FAIS MES COURSES</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li [hidden]="!user" class="nav-item"><a class="nav-link" routerLink="/home">VosCommandes</a></li>
+      <li [hidden]="!user" class="nav-item"><a class="nav-link" routerLink="/shop">Magasins</a></li>
+      <li [hidden]="!user" class="nav-item"><a class="nav-link" routerLink="/basket">Panier</a></li>
+      <li [hidden]="user" class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
+      <li [hidden]="!user" class="nav-item"><a class="nav-link" href="javascript:void(0)" (click)="logout()">Logout</a></li>
+  </ul>
+  </div>
+</nav>
+
+

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "50001",
+    "adresse": "20 avenue Ablert Einstein, Bat.A",
+    "codePostal": 69100,
+    "ville": "Villeurbanne"
+  },
+  {
+    "id": "50002",
+    "adresse": "20 avenue Ablert Einstein, Bat.B",
+    "codePostal": 69100,
+    "ville": "Villeurbanne"
+  },
+  {
+    "id": "50003",
+    "adresse": "20 avenue Ablert Einstein, Bat.C",
+    "codePostal": 69100,
+    "ville": "Villeurbanne"
+  },
+  {
+    "id": "50004",
+    "adresse": "20 avenue Ablert Einstein, Bat.D",
+    "codePostal": 69100,
+    "ville": "Villeurbanne"
+  }
+]

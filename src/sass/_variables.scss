@@ -1,0 +1,11 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+//$color-gris1: #dadada;
+
+// OverWrite BoostrapColor
+$theme-colors: (
+  "primary": #00d974,
+  "danger": #ff4136,
+  "custom-color": #900
+);

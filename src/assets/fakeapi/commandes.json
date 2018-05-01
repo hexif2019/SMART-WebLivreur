@@ -1,0 +1,201 @@
+[
+  {
+    "id": "20001",
+    "etat": "PAYEMENT_EFFECTUE",
+    "prix": 105,
+    "magasins": [
+      {
+        "id": "30001",
+        "adresse": "4 Place Charles Hernu",
+        "etat": "ATTENTE_CONFIRMATION_MAGASIN",
+        "codePostal": 69100,
+        "ville": "Villeurbanne",
+        "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
+        "email": "m30001@magasin.fr",
+        "phone": "0666666666",
+        "position": {
+          "longitude": 45.770142,
+          "latitude": 4.863079
+        },
+        "produits": [
+          {
+            "id": "40001",
+            "denomination": "Cheeseburger",
+            "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty, but the burger can include many variations in structure, ingredients, and composition",
+            "img": "https://en.wikipedia.org/wiki/Cheeseburger#/media/File:Cheeseburger.jpg",
+            "quantite": 2,
+            "prix": 320,
+            "prixTotal": 640
+          },
+          {
+            "id": "40002",
+            "denomination": "Chili burger",
+            "description": "A chili burger (also known as a chili size, or simply size, stemming from \"hamburger size\") is a type of hamburger",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chili_burger_%28cropped%29.jpg",
+            "quantite": 1,
+            "prix": 415,
+            "prixTotal": 415
+          }
+        ],
+        "prixTotal": 1055
+      }
+    ]
+  },
+  {
+    "id": "20002",
+    "etat": "ANNULATION_MAGASIN",
+    "prix": 105,
+    "magasins": [
+      {
+        "id": "30001",
+        "etat": "ANNULATION_MAGASIN",
+        "adresse": "4 Place Charles Hernu",
+        "codePostal": 69100,
+        "ville": "Villeurbanne",
+        "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
+        "email": "m30001@magasin.fr",
+        "phone": "0666666666",
+        "position": {
+          "longitude": 45.770142,
+          "latitude": 4.863079
+        },
+        "produits": [
+          {
+            "id": "40001",
+            "denomination": "Cheeseburger",
+            "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty, but the burger can include many variations in structure, ingredients, and composition",
+            "img": "https://en.wikipedia.org/wiki/Cheeseburger#/media/File:Cheeseburger.jpg",
+            "quantite": 2,
+            "prix": 320,
+            "prixTotal": 640
+          },
+          {
+            "id": "40002",
+            "denomination": "Chili burger",
+            "description": "A chili burger (also known as a chili size, or simply size, stemming from \"hamburger size\") is a type of hamburger",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chili_burger_%28cropped%29.jpg",
+            "quantite": 1,
+            "prix": 415,
+            "prixTotal": 415
+          }
+        ],
+        "prixTotal": 1055
+      },
+      {
+        "id": "30001",
+        "etat": "VALIDE_MAGASINS_MAIS_MODIF",
+        "adresse": "4 Place Charles Hernu",
+        "codePostal": 69100,
+        "ville": "Villeurbanne",
+        "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
+        "email": "m30001@magasin.fr",
+        "phone": "0666666666",
+        "position": {
+          "longitude": 45.770142,
+          "latitude": 4.863079
+        },
+        "produits": [
+          {
+            "id": "40001",
+            "denomination": "Cheeseburger",
+            "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty, but the burger can include many variations in structure, ingredients, and composition",
+            "img": "https://en.wikipedia.org/wiki/Cheeseburger#/media/File:Cheeseburger.jpg",
+            "quantite": 2,
+            "prix": 320,
+            "prixTotal": 640
+          },
+          {
+            "id": "40002",
+            "denomination": "Chili burger",
+            "description": "A chili burger (also known as a chili size, or simply size, stemming from \"hamburger size\") is a type of hamburger",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chili_burger_%28cropped%29.jpg",
+            "quantite": 1,
+            "prix": 415,
+            "prixTotal": 415
+          }
+        ],
+        "prixTotal": 1055
+      }
+    ]
+  },
+  {
+    "id": "20003",
+    "prix": 105,
+    "magasins": [
+      {
+        "id": "80001",
+        "adresse": "110 Boulevard du 11 Novembre 1918, 69100 Villeurbanne",
+        "codePostal": 69100,
+        "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
+        "ville": "Villeurbanne",
+        "description": "carrefour express",
+        "denomination": "carrefour express",
+        "email": "carrefour@carrefour.fr",
+        "phone": "0666666666",
+        "position": {
+          "longitude": 45.770142,
+          "latitude": 4.863079
+        },
+        "produits": [
+          {
+            "denomination": "CocaCola",
+            "nb": 3,
+            "prix": 100,
+            "poids": 500,
+            "img": "http://southeasternbeers.co.uk/291-thickbox_default/330ml-coke-icon.jpg",
+            "description": "a carbonated soft drink produced by The Coca-Cola Company"
+          },
+          {
+            "denomination": "Pepsi",
+            "nb": 1,
+            "prix": 200,
+            "poids": 500,
+            "img": "http://icons.iconarchive.com/icons/michael/coke-pepsi/128/Pepsi-Can-icon.png",
+            "description": "a carbonated soft drink produced"
+          }
+        ],
+        "ville": "Lyon",
+        "codePostal": "69100",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/0/01/Logo_Carrefour_sans_texte.png",
+        "position": "45.778632,4.871106"
+      },
+      {
+        "id": "80002",
+        "adresse": "87 Avenue Félix Faure, 69003 Lyon",
+        "codePostal": 69100,
+        "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
+        "ville": "Villeurbanne",
+        "description": "Auchan",
+        "denomination": "Auchan",
+        "email": "Auchan@Auchan.fr",
+        "phone": "0666666666",
+        "position": {
+          "longitude": 45.770142,
+          "latitude": 4.863079
+        },
+        "produits": [
+          {
+            "denomination": "YY",
+            "nb": 1,
+            "prix": 100,
+            "poids": 500,
+            "img": "http://southeasternbeers.co.uk/291-thickbox_default/330ml-coke-icon.jpg",
+            "description": "a carbonated soft drink produced by The Coca-Cola Company"
+          },
+          {
+            "denomination": "XX",
+            "nb": 23,
+            "prix": 200,
+            "poids": 500,
+            "img": "http://icons.iconarchive.com/icons/michael/coke-pepsi/128/Pepsi-Can-icon.png",
+            "description": "a carbonated soft drink produced"
+          }
+        ],
+        "ville": "Lyon",
+        "codePostal": "69003",
+        "img": "https://upload.wikimedia.org/wikipedia/fr/c/ce/Logo_Auchan.svg",
+        "position": "45.75355440000001,4.857683800000018"
+      }
+    ]
+  }
+]
