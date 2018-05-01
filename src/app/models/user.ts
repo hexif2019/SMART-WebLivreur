@@ -1,9 +1,11 @@
-import {Residence} from "./residence";
+import {Residence} from './residence';
+import {Coordonne} from './coordonne.model';
 
-export class User{
+export class User {
   id?: string;
   nom?: string;
   prenom?: string;
-  residence?: Residence;
   email?: string;
+  rayon?: number;
+  position?: Coordonne;
 }

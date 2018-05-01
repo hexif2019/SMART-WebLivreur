@@ -1,6 +1,6 @@
-import {Magasin} from "./magasin.model";
-import {User} from "./user";
-import {Residence} from "./residence";
+import {Magasin} from './magasin.model';
+import {User} from './user';
+import {Residence} from './residence';
 
 export class Commande {
   id?: string;

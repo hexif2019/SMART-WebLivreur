@@ -8,47 +8,33 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ResidanceService} from './services/residance.service';
 import { RouterModule, Routes } from '@angular/router';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
-import { PageShopComponent } from './pages/page-shop/page-shop.component';
-import { PageBasketComponent } from './pages/page-basket/page-basket.component';
-import { PagePaymentComponent } from './pages/page-payment/page-payment.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RechercherArticleComponent } from './rechercher-article/rechercher-article.component';
-import {BrowserModule } from '@angular/platform-browser';
-import {NavbarComponent} from './navbar/navbar.component'
+import { BrowserModule } from '@angular/platform-browser';
+import { NavbarComponent } from './navbar/navbar.component';
 import { AlertModule} from 'ngx-bootstrap';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import {PanierService} from './services/panier.service';
 import { PrixPipe } from './pipes/prix.pipe';
-import {CommandeService} from "./services/commande.service";
+import { CommandeService } from './services/commande.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
-  { path: 'login', component: PageLoginComponent, data: { showRegister: false } },
-  { path: 'register', component: PageLoginComponent, data: { showRegister: true }  },
+  { path: 'login', component: PageLoginComponent },
   { path: 'home', component: PageHomeComponent},
-  { path: 'shop', component: PageShopComponent},
-  { path: 'basket', component: PageBasketComponent},
-  { path: 'payment', component: PagePaymentComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RechercherArticleComponent,
     NavbarComponent,
 
     FilterPipe,
 
     PageLoginComponent,
-    PageShopComponent,
-    PageBasketComponent,
-    PagePaymentComponent,
     PageNotFoundComponent,
     PageHomeComponent,
     PrixPipe,
@@ -56,7 +42,7 @@ const appRoutes: Routes = [
   imports: [
     AlertModule,
     BsDropdownModule,
-    RouterModule.forRoot(appRoutes,{ enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
     BrowserModule,
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
@@ -64,7 +50,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService, ResidanceService, PanierService, CommandeService],
+  providers: [UserService, CommandeService],
   bootstrap: [AppComponent],
   exports: [BsDropdownModule, TooltipModule, ModalModule]
 })

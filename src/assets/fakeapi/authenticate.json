@@ -6,11 +6,10 @@
     "nom": "vogel",
     "prenom": "hugues",
     "email": "hugues.vogel@boitemail.com",
-    "residence": {
-      "id": "50002",
-      "adresse": "20 avenue Ablert Einstein Bat.B",
-      "codePostal": 69100,
-      "ville": "Villeurbanne"
+    "rayon": 5000,
+    "position": {
+      "latitude": 45.780160,
+      "longitude": 4.873210
     }
   }
 }

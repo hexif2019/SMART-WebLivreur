@@ -1,7 +1,4 @@
-import {Component, TemplateRef} from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import {PanierService} from './services/panier.service';
-import {Article} from './models/article.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +6,5 @@ import {Article} from './models/article.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  public modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) {}
-  public openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
-  }
+  constructor() {}
 }
