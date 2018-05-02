@@ -10,6 +10,7 @@
         "etat": "ATTENTE_CONFIRMATION_MAGASIN",
         "codePostal": 69100,
         "ville": "Villeurbanne",
+        "denomination": "Mc Donald",
         "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
         "email": "m30001@magasin.fr",
         "phone": "0666666666",
@@ -22,7 +23,7 @@
             "id": "40001",
             "denomination": "Cheeseburger",
             "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty, but the burger can include many variations in structure, ingredients, and composition",
-            "img": "https://en.wikipedia.org/wiki/Cheeseburger#/media/File:Cheeseburger.jpg",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1920px-Cheeseburger.jpg",
             "quantite": 2,
             "prix": 320,
             "prixTotal": 640
@@ -31,7 +32,7 @@
             "id": "40002",
             "denomination": "Chili burger",
             "description": "A chili burger (also known as a chili size, or simply size, stemming from \"hamburger size\") is a type of hamburger",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chili_burger_%28cropped%29.jpg",
+            "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/5/4/4/FNM-060112_Loaded-Chili-Cheeseburger_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382375812129.jpeg",
             "quantite": 1,
             "prix": 415,
             "prixTotal": 415
@@ -52,6 +53,7 @@
         "adresse": "4 Place Charles Hernu",
         "codePostal": 69100,
         "ville": "Villeurbanne",
+        "denomination": "Burger King",
         "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
         "email": "m30001@magasin.fr",
         "phone": "0666666666",
@@ -64,8 +66,8 @@
             "id": "40001",
             "denomination": "Cheeseburger",
             "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty, but the burger can include many variations in structure, ingredients, and composition",
-            "img": "https://en.wikipedia.org/wiki/Cheeseburger#/media/File:Cheeseburger.jpg",
-            "quantite": 2,
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1920px-Cheeseburger.jpg",
+            "nb": 2,
             "prix": 320,
             "prixTotal": 640
           },
@@ -73,8 +75,8 @@
             "id": "40002",
             "denomination": "Chili burger",
             "description": "A chili burger (also known as a chili size, or simply size, stemming from \"hamburger size\") is a type of hamburger",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chili_burger_%28cropped%29.jpg",
-            "quantite": 1,
+            "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/5/4/4/FNM-060112_Loaded-Chili-Cheeseburger_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382375812129.jpeg",
+            "nb": 1,
             "prix": 415,
             "prixTotal": 415
           }
@@ -87,6 +89,7 @@
         "adresse": "4 Place Charles Hernu",
         "codePostal": 69100,
         "ville": "Villeurbanne",
+        "denomination": "Leclerc",
         "img": "https://vignette.wikia.nocookie.net/ronaldmcdonald/images/b/b5/Mcdonalds-logo-current-1024x750.png",
         "email": "m30001@magasin.fr",
         "phone": "0666666666",
@@ -99,8 +102,8 @@
             "id": "40001",
             "denomination": "Cheeseburger",
             "description": "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty, but the burger can include many variations in structure, ingredients, and composition",
-            "img": "https://en.wikipedia.org/wiki/Cheeseburger#/media/File:Cheeseburger.jpg",
-            "quantite": 2,
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1920px-Cheeseburger.jpg",
+            "nb": 2,
             "prix": 320,
             "prixTotal": 640
           },
@@ -108,8 +111,8 @@
             "id": "40002",
             "denomination": "Chili burger",
             "description": "A chili burger (also known as a chili size, or simply size, stemming from \"hamburger size\") is a type of hamburger",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Chili_burger_%28cropped%29.jpg",
-            "quantite": 1,
+            "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/5/4/4/FNM-060112_Loaded-Chili-Cheeseburger_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382375812129.jpeg",
+            "nb": 1,
             "prix": 415,
             "prixTotal": 415
           }
@@ -151,7 +154,7 @@
             "prix": 200,
             "poids": 500,
             "img": "http://icons.iconarchive.com/icons/michael/coke-pepsi/128/Pepsi-Can-icon.png",
-            "description": "a carbonated soft drink produced"
+            "description": "a carbonated soft drink produced by The Pepsi Company"
           }
         ],
         "ville": "Lyon",
@@ -188,7 +191,7 @@
             "prix": 200,
             "poids": 500,
             "img": "http://icons.iconarchive.com/icons/michael/coke-pepsi/128/Pepsi-Can-icon.png",
-            "description": "a carbonated soft drink produced"
+            "description": "a carbonated soft drink produced by The Pepsi Company"
           }
         ],
         "ville": "Lyon",

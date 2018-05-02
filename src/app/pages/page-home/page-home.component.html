@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Commandes en cours</h1>
-  <div class="list-group" class="commandes">
+  <div class="list-group commandes mb-3">
     <div *ngFor="let commande of currentCommandes" class="list-group-item list-group-item-action"
          (click)="selectCommande(commande)" [ngClass]="{ active: selectedCommande === commande }">
       <div class="row">
@@ -17,10 +17,54 @@
     </div>
   </div>
   <div *ngIf="selectedCommande" class="tournee">
-      <ul class="nav nav-tabs" class="magasins">
-        <li class="nav-item" *ngFor="let magasin of selectedCommande.magasins">
-          <a class="nav-link" href="javascript:void(0)" [ngClass]="{ active: selectedMagasin === magasin }" (click)="selectMagasin(magasin)">{{ magasin.denomination }}</a>
-        </li>
-      </ul>
+    <ul class="nav nav-tabs magasins mb-3">
+      <li class="nav-item" *ngFor="let magasin of selectedCommande.magasins">
+        <a class="nav-link" href="javascript:void(0)" [ngClass]="{ active: selectedMagasin === magasin }"
+           (click)="selectMagasin(magasin)">{{ magasin.denomination }}</a>
+      </li>
+    </ul>
+    <div class="row">
+      <div class="col-4">
+        <h4>{{ selectedMagasin.denomination }}</h4>
+        <span class="badge badge-{{ selectedMagasin.display.status.etat }}"> {{ selectedMagasin.display.status.title }} </span>
+      </div>
+      <div class="col-8">
+        <table class="articles table table-sm">
+          <thead>
+          <tr>
+            <th scope="col" style="width: 110px;min-width: 110px"></th>
+            <th scope="col" style="width: 100%">Nom</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let article of selectedMagasin.produits" class="article">
+            <td scope="row" class="text-center" *ngIf="{zoom:false} as display">
+              <img src="{{article.img}}" alt="{{ article.denomination }}" [ngClass]="{zoom: display.zoom === true}" (click)="display.zoom = !display.zoom">
+            </td>
+            <td *ngIf="{showDescription:false} as display" >
+              <h5>{{ article.denomination }}</h5>
+              <p *ngIf="display.showDescription">
+                {{ article.description }}
+              </p>
+              <a *ngIf="!display.showDescription" href="javascript:void(0)" (click)="display.showDescription = true">Voir +</a>
+            </td>
+            <td>{{ article.nb }}</td>
+            <td>{{ article.nb*article.prix | prix }}€</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="text-right">Total :</td>
+            <td class="font-weight-bold">{{ selectedMagasin.produits.length }}({{
+              countNbProduit(selectedMagasin.produits) }})
+            </td>
+            <td class="font-weight-bold">{{ countPrix(selectedMagasin.produits) | prix }}€</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   </div>
 </div>

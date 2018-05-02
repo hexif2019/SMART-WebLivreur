@@ -3,6 +3,7 @@ import { Commande } from '../../models/commande';
 import { CommandeService } from '../../services/commande.service';
 import { UserService } from '../../services/user.service';
 import { Magasin } from '../../models/magasin.model';
+import {Article} from '../../models/article.model';
 
 @Component({
   selector: 'app-page-home',
@@ -32,9 +33,18 @@ export class PageHomeComponent implements OnInit {
 
   selectCommande(commande: Commande) {
     this.selectedCommande = commande;
+    this.selectedMagasin = commande.magasins[0];
   }
 
   selectMagasin(magasin: Magasin) {
+    this.selectedMagasin = magasin;
+  }
 
+  countNbProduit(produits: Article[]) {
+    return produits.reduce((acc, produit) => acc + produit.nb, 0);
+  }
+
+  countPrix(produits: Article[]) {
+    return produits.reduce((acc, produit) => acc + produit.prix * produit.nb, 0);
   }
 }
