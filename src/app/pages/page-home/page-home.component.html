@@ -27,6 +27,20 @@
       <div class="col-4">
         <h4>{{ selectedMagasin.denomination }}</h4>
         <span class="badge badge-{{ selectedMagasin.display.status.etat }}"> {{ selectedMagasin.display.status.title }} </span>
+        <p>
+          <span>Adresse</span>:<br/>
+          <a href="javascript:void(0)" (click)="mapGoTo(selectedMagasin.position)">{{ selectedMagasin.adresse }}<br>
+          Code postal: {{ selectedMagasin.codePostal }}</a>
+          <button *ngIf="selectedMagasin.etat === 'ATTRIBUE_A_COURSIER'" (click)="livreurOnMagasin()" class="btn-sm btn btn-success float-right">
+            Commande recuperer
+          </button>
+        </p>
+        <h3>Destination</h3>
+        <p>
+          <span>Adresse</span>:<br>
+          <a href="javascript:void(0)" (click)="mapGoTo(selectedCommande.residence.position)">{{ selectedCommande.residence.adresse }}<br/>
+            {{ selectedCommande.residence.codePostal }} {{ selectedCommande.residence.ville }}</a>
+        </p>
       </div>
       <div class="col-8">
         <table class="articles table table-sm">
@@ -65,6 +79,6 @@
         </table>
       </div>
     </div>
-    <div #gmap></div>
   </div>
+  <div #gmap class="ggmap mb-5"></div>
 </div>

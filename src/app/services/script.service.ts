@@ -6,7 +6,7 @@ interface Scripts {
 }
 
 export const ScriptStore: Scripts[] = [
-  {name: 'googlemap', src: 'http://maps.googleapis.com/maps/api/js'}
+  {name: 'googlemap', src: 'http://maps.googleapis.com/maps/api/js?key=AIzaSyA11pIB44sN4i7rCFBvVA9uIRMwrBDBl3o'}
 ];
 
 @Injectable()

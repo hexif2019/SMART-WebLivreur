@@ -20,6 +20,7 @@ import {FilterPipe} from './pipes/filter.pipe';
 import {PrixPipe} from './pipes/prix.pipe';
 import {CommandeService} from './services/commande.service';
 import {ScriptService} from './services/script.service';
+import {MapService} from './services/map.service';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -52,7 +53,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService, CommandeService, ScriptService],
+  providers: [UserService, CommandeService, ScriptService, MapService],
   bootstrap: [AppComponent],
   exports: [BsDropdownModule, TooltipModule, ModalModule]
 })

@@ -3,6 +3,15 @@
     "id": "20001",
     "etat": "PAYEMENT_EFFECTUE",
     "prix": 105,
+    "residence": {
+      "adresse": "20 Avenue albert einstine M",
+      "codePostal": 69100,
+      "ville": "Villeurbanne",
+      "position": {
+        "latitude": 45.780160,
+        "longitude": 4.873210
+      }
+    },
     "magasins": [
       {
         "id": "30001",
@@ -15,8 +24,8 @@
         "email": "m30001@magasin.fr",
         "phone": "0666666666",
         "position": {
-          "longitude": 45.770142,
-          "latitude": 4.863079
+          "latitude": 45.770142,
+          "longitude": 4.863079
         },
         "produits": [
           {
@@ -46,10 +55,16 @@
     "id": "20002",
     "etat": "ANNULATION_MAGASIN",
     "prix": 105,
+    "residence": {
+      "position": {
+        "latitude": 45.780160,
+        "longitude": 4.873210
+      }
+    },
     "magasins": [
       {
         "id": "30001",
-        "etat": "ANNULATION_MAGASIN",
+        "etat": "ATTRIBUE_A_COURSIER",
         "adresse": "4 Place Charles Hernu",
         "codePostal": 69100,
         "ville": "Villeurbanne",
@@ -124,6 +139,12 @@
   {
     "id": "20003",
     "prix": 105,
+    "residence": {
+      "position": {
+        "latitude": 45.780160,
+        "longitude": 4.873210
+      }
+    },
     "magasins": [
       {
         "id": "80001",
@@ -159,8 +180,7 @@
         ],
         "ville": "Lyon",
         "codePostal": "69100",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/0/01/Logo_Carrefour_sans_texte.png",
-        "position": "45.778632,4.871106"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/0/01/Logo_Carrefour_sans_texte.png"
       },
       {
         "id": "80002",
@@ -196,8 +216,7 @@
         ],
         "ville": "Lyon",
         "codePostal": "69003",
-        "img": "https://upload.wikimedia.org/wikipedia/fr/c/ce/Logo_Auchan.svg",
-        "position": "45.75355440000001,4.857683800000018"
+        "img": "https://upload.wikimedia.org/wikipedia/fr/c/ce/Logo_Auchan.svg"
       }
     ]
   }

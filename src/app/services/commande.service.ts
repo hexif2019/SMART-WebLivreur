@@ -10,7 +10,7 @@ export class CommandeService {
 
   }
 
-  private getStatusDisplayCommande(status: string): any {
+  getStatusDisplayCommande(status: string): any {
     switch (status) {
       case 'EDITION':
       case 'PAYEMENT_EFFECTUE':
@@ -37,7 +37,7 @@ export class CommandeService {
     }
   }
 
-  private getStatusDisplayCommandeMagasin(status: string): any {
+  getStatusDisplayCommandeMagasin(status: string): any {
     switch (status) {
       case 'EDITION':
       case 'PAYEMENT_EFFECTUE':
@@ -86,15 +86,21 @@ export class CommandeService {
   getCommandesEnCour(userid: string) {
     return fakeapi(
       this.http.get<Commande[]>('/api/commandes.json'),
-      this.http.get<Commande[]>('/api/livreur/getCommandesEnCour/${userid}')
+      this.http.get<Commande[]>('/api/livreur/getCommandesEnCour/' + userid)
     ).map(commandes => this.addCommandesDiplayData(commandes));
   }
 
   getCommandesArchiver(id: string) {
     return fakeapi(
       this.http.get<Commande[]>('/api/commandes.json'),
-      this.http.get<Commande[]>('/api/livreur/getCommandesArchiver/${userid}')
+      this.http.get<Commande[]>('/api/livreur/getCommandesArchiver/' + id)
     ).map(commandes => this.addCommandesDiplayData(commandes));
   }
 
+  livreurOnMagasin(idCommande: string | undefined, idMagasin: string | undefined) {
+    return fakeapi(
+      this.http.get<Commande>('/api/commande.json'),
+      this.http.get<Commande>('/api/livreur/onMagasin/' + idCommande + '/' + idMagasin)
+    );
+  }
 }
