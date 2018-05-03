@@ -63,7 +63,7 @@ export class UserService {
     this.tokenLoading = true;
     const ret = fakeapi(
       this.http.get<User>('/api/authenticate.json'),
-      this.http.post<User>('/api/authenticateToken', {email: email, token: token})
+      this.http.post<User>('/api/livreur/authenticateToken', {email: email, token: token})
     ).map(
       user => {
         this.user = user;
@@ -80,7 +80,7 @@ export class UserService {
   login(email: string, password: string): Observable<User> {
     const ret = fakeapi(
       this.http.get<any>('/api/authenticate.json'),
-      this.http.post<any>('/api/authenticate', {email: email, password: password})
+      this.http.post<any>('/api/livreur/authenticate', {email: email, password: password})
     )
       .map(data => {
 
