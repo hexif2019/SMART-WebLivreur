@@ -41,6 +41,9 @@
           <a href="javascript:void(0)" (click)="mapGoTo(selectedCommande.residence.position)">{{ selectedCommande.residence.adresse }}<br/>
             {{ selectedCommande.residence.codePostal }} {{ selectedCommande.residence.ville }}</a>
         </p>
+        <p *ngIf="selectedCommande.etat === 'EN_COURS_DE_LIVRAISON'">
+          <span>Code residance:</span> {{ selectedCommande.codeLivreur }}
+        </p>
       </div>
       <div class="col-8">
         <table class="articles table table-sm">
