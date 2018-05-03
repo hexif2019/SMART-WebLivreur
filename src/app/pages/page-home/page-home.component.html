@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Commandes en cours</h1>
   <div class="list-group commandes mb-3">
-    <div *ngFor="let commande of currentCommandes" class="list-group-item list-group-item-action"
+    <div *ngFor="let commande of currentCommandes" class="list-group-item list-group-item-action list-group-item-{{ commande.display.status.etat }}"
          (click)="selectCommande(commande)" [ngClass]="{ active: selectedCommande === commande }">
       <div class="row">
         <div class="col-4">

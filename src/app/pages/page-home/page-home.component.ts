@@ -125,6 +125,8 @@ export class PageHomeComponent implements OnInit {
     this.commandeService.livreurOnMagasin(commande.id, magasin.id).subscribe(() => {
       magasin.etat = 'EN_COURS_DE_LIVRAISON';
       magasin.display.status = this.commandeService.getStatusDisplayCommandeMagasin(magasin.etat);
+      commande.etat = 'EN_COURS_DE_LIVRAISON';
+      commande.display.status = this.commandeService.getStatusDisplayCommande(commande.etat);
     });
   }
 }
