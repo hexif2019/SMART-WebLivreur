@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Commande } from '../../models/commande';
-import { CommandeService } from '../../services/commande.service';
-import { UserService } from '../../services/user.service';
-import { Magasin } from '../../models/magasin.model';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {Commande} from '../../models/commande';
+import {CommandeService} from '../../services/commande.service';
+import {UserService} from '../../services/user.service';
+import {Magasin} from '../../models/magasin.model';
 import {Article} from '../../models/article.model';
+import {} from '@types/googlemaps';
+import {ScriptService} from '../../services/script.service';
 
 @Component({
   selector: 'app-page-home',
@@ -16,11 +18,15 @@ export class PageHomeComponent implements OnInit {
   selectedCommande: Commande;
   selectedMagasin: Magasin;
 
+  @ViewChild('gmap') gmapElement: any;
+  map: google.maps.Map;
+
   viewAllOldCommande = false;
 
   constructor(
     private commandeService: CommandeService,
-    private userService: UserService
+    private userService: UserService,
+    private scriptService: ScriptService
   ) {
   }
 
@@ -28,6 +34,15 @@ export class PageHomeComponent implements OnInit {
     this.userService.requirLogin().then(user => {
       this.commandeService.getCommandesEnCour(user.id).subscribe(commandes => this.currentCommandes = commandes);
       this.commandeService.getCommandesArchiver(user.id).subscribe(commandes => this.oldCommandes = commandes);
+    });
+    this.scriptService.loadScript('googlemap').then(_ => {
+
+      const mapProp = {
+        center: new google.maps.LatLng(45.7631724, 4.8599094),
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
     });
   }
 
