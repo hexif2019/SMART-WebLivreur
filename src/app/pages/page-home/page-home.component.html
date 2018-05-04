@@ -32,7 +32,7 @@
           <a href="javascript:void(0)" (click)="mapGoTo(selectedMagasin.position)">{{ selectedMagasin.adresse }}<br>
           Code postal: {{ selectedMagasin.codePostal }}</a>
           <button *ngIf="selectedMagasin.etat === 'ATTRIBUE_A_COURSIER'" (click)="livreurOnMagasin()" class="btn-sm btn btn-success float-right">
-            Commande recuperer
+            Commande recupérée
           </button>
         </p>
         <h3>Destination</h3>
@@ -42,7 +42,7 @@
             {{ selectedCommande.residence.codePostal }} {{ selectedCommande.residence.ville }}</a>
         </p>
         <p *ngIf="selectedCommande.etat === 'EN_COURS_DE_LIVRAISON'">
-          <span>Code residance:</span> {{ selectedCommande.codeLivreur }}
+          <span>Code résidence:</span> {{ selectedCommande.codeLivreur }}
         </p>
       </div>
       <div class="col-8">
